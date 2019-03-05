@@ -1,7 +1,7 @@
 # network-generator
 MATLAB package to generate networks.
 
-It uses [Python's](https://www.python.org/) [networkx](https://networkx.github.io/) library for standard network generation, but can easily allow for other methods for generating networks.
+For some standard networks, it uses [Python's](https://www.python.org/) [networkx](https://networkx.github.io/) library for standard network generation. For other networks, it borrows code from other sources. You can also easily add other methods for generating networks.
 
 ## Installation
 Make sure you have [python](https://www.python.org/downloads/) and [networkx](https://networkx.github.io/) installed.
