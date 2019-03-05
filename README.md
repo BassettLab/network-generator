@@ -18,13 +18,36 @@ imagesc(n.A)
 ```
 
 ## Available network topologies
-|Topology & Function|Parameters|
-|---|---|
-|[Erdos-Renyi](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html#networkx.generators.random_graphs.erdos_renyi_graph)<br>`erdosrenyi(n,p,directed=false)`|<ul><li>*n* (int) - Number of nodes </li><li>*p* (double) - Probability for edge creation </li><li>*directed* (boolean)</li></ul>|
-|[random geometric](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.geometric.random_geometric_graph.html#networkx.generators.geometric.random_geometric_graph)<br>`randomgeometric(n,radius,dim=2,pos=None)`|<ul><li>*n* (int) - Number of nodes</li><li>*radius* (float) - Distance threshold value</li><li>*dim* (int) - Dimension of graph</li><li>*pos* (float) Position of nodes, m-by-dim matrix</li></ul>|
-|[Watts-Strogatz](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.watts_strogatz_graph.html#networkx.generators.random_graphs.watts_strogatz_graph)<br>`wattsstrogatz(n,k,p)`|<ul><li>*n* (int) - Number of nodes</li><li>*k* (int) - Each node is joined with its k nearest neighbors in a ring topology</li><li>*p* (float) - The probability of rewiring each edge</li></ul>|
-|[Scale-free](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.directed.scale_free_graph.html#networkx.generators.directed.scale_free_graph)<br>`scalefree(n,alpha=0.41,beta=0.54,`<br>`gamma=0.05,delta_in=0.2,delta_out=0)`|<ul><li>*n* (integer) – Number of nodes</li><li>*alpha* (float) – Probability for adding a new node connected to an existing node chosen randomly according to the in-degree distribution. (not yet supported)</li><li>*beta* (float) – Probability for adding an edge between two existing nodes. (not yet supported)</li><li>*gamma* (float) – Probability for adding a new node connected to an existing node chosen randomly according to the out-degree distribution. (not yet supported)</li><li>delta_in (float) – Bias for choosing ndoes from in-degree distribution</li><li>delta_out (float) – Bias for choosing ndoes from out-degree distribution.</li></ul>|
-|[Modular](https://arxiv.org/pdf/1706.05117.pdf)<br>`modular(n,k,m,p=0.8)`|<ul><li>*n* (int) - Number of nodes</li><li>*k* (int) - Desired number of edges</li><li>*m* (int) - Number of modules</li><li>*p* (float, default=0.8) - Desired fraction of k within modules</li></ul>|
+
+**[Erdos-Renyi](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html)** `erdosrenyi` <br>
+**n** (int) number of nodes <br>
+**p** (double) probability for edge creation <br>
+**directed** (boolean, default=false) <br>
+
+**[Random geometric](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.geometric.random_geometric_graph.html)** `randomgeometric` <br>
+**n** (int) number of nodes <br>
+**radius** (float) distance threshold value <br>
+**dim** (int, default=2) dimension of graph <br>
+**pos** (float, default=None) position of nodes, m-by-dim matrix
+
+**[Watts-Strogatz](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.watts_strogatz_graph.html)** `wattsstrogatz` <br>
+**n** (int) number of nodes <br>
+**k** (int) each node is joined with its k nearest neighbors in a ring topology <br>
+**p** (float) the probability of rewiring each edge
+
+**[Scale-free](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.directed.scale_free_graph.html)** `scalefree` <br>
+**n** (integer) number of nodes <br>
+**alpha** (float, default=0.41) probability for adding a new node connected to an existing node chosen randomly according to the in-degree distribution<br>
+**beta** (float, default=0.54) probability for adding an edge between two existing nodes <br>
+**gamma** (float, default=0.05) probability for adding a new node connected to an existing node chosen randomly according to the out-degree distribution <br>
+**delta_in** (float, default=0.2) bias for choosing ndoes from in-degree distribution <br>
+**delta_out** (float, default=0) bias for choosing ndoes from out-degree distribution
+
+**[Modular](https://arxiv.org/pdf/1706.05117.pdf)** `modular` <br>
+**n** (int) number of nodes<br>
+**k** (int) desired number of edges<br>
+**m** (int) number of modules<br>
+**p** (float, default=0.8) desired fraction of k within modules
 
 ### Adding topology generators
 
