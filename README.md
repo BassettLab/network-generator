@@ -33,7 +33,5 @@ For topologies and their parameters, see [API](+generators/API.md).
 Add additional topologies:
 1. Directed versions of topologies
 2. Generative growth model
-3. Modular small-world networks
-4. Hierarchical modular small-world networks
-5. Graphical lasso with data
+3. Graphical lasso with data
 
