@@ -14,6 +14,10 @@ end
 switch network.topology
     case 'erdosrenyi'
         network.A = net.generators.erdosrenyi(network);
+    case 'wattsstrogatz'
+        network.A = net.generators.wattsstrogatz(network);
+    case 'randomgeometric'
+        network.A = net.generators.randomgeometric(network);
     otherwise
         error(['Topology ' network.topology ' undefined.'])
 end
