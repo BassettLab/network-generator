@@ -16,11 +16,11 @@ imagesc(n.A)
 ```
 
 ## Available network topologies
-|Topology|Parameters|
-|---|---|
-|[Erdos-Renyi](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html#networkx.generators.random_graphs.erdos_renyi_graph)|<ul><li>*n* (int) The number of nodes </li><li>*p* (double) Probability for edge creation </li><li>*directed* (boolean)</li></ul>|
-|[random geometric](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.geometric.random_geometric_graph.html#networkx.generators.geometric.random_geometric_graph)|<ul><li>*n* (int) Number of nodes or iterable of nodes</li><li>*radius* (float) Distance threshold value</li><li>*dim* (int, optional) Dimension of graph</li></ul>|
-|[Watts-Strogatz](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.watts_strogatz_graph.html#networkx.generators.random_graphs.watts_strogatz_graph)|<ul><li>*n* (int) The number of nodes</li><li>*k* (int) Each node is joined with its k nearest neighbors in a ring topology</li><li>*p* (float) The probability of rewiring each edge</li></ul>|
+|Topology|Function|Parameters|
+|---|---|---|
+|[Erdos-Renyi](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html#networkx.generators.random_graphs.erdos_renyi_graph)|`erdosrenyi(n,p,directed)`|<ul><li>*n* (int) The number of nodes </li><li>*p* (double) Probability for edge creation </li><li>*directed* (boolean)</li></ul>|
+|[random geometric](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.geometric.random_geometric_graph.html#networkx.generators.geometric.random_geometric_graph)|`randomgeometric(n,radius,dim)`|<ul><li>*n* (int) Number of nodes or iterable of nodes</li><li>*radius* (float) Distance threshold value</li><li>*dim* (int, optional) Dimension of graph</li></ul>|
+|[Watts-Strogatz](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.watts_strogatz_graph.html#networkx.generators.random_graphs.watts_strogatz_graph)|`wattsstrogatz(n,k,p)`|<ul><li>*n* (int) The number of nodes</li><li>*k* (int) Each node is joined with its k nearest neighbors in a ring topology</li><li>*p* (float) The probability of rewiring each edge</li></ul>|
 
 ### Adding topology generators
 
