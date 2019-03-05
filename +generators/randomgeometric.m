@@ -7,9 +7,7 @@ function A = randomgeometric(p)
 %       pos (matrix, optional) Position of nodes, m-by-dim matrix
 %           Converted to Python dictionary keyed by node with node 
 %           positions as values
-if ~isfield(p,'dim')
-    p.dim = 2;
-end
+if ~isfield(p,'dim'); p.dim = 2; end
 if ~isfield(p,'pos')
     args = pyargs('dim',int16(p.dim));
 else
