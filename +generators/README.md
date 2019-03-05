@@ -1,4 +1,4 @@
-## Available network topologies<a name="available"></a>
+## Available network topologies
 
 **[Erdos-Renyi graph](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html)** `erdosrenyi` <br>
 **n** (int) number of nodes <br>
