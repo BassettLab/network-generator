@@ -1,4 +1,4 @@
-function A = scalefree(params)
+function A = scalefree(p)
 %Scale-free directed graph
 %   parameters
 %       n (integer) Number of nodes in graph
@@ -17,6 +17,6 @@ function A = scalefree(params)
 %       delta_out (float) Bias for choosing ndoes from out-degree 
 %           distribution.
 py.importlib.import_module('networkx');
-g = py.networkx.scale_free_graph(int16(params.n));
+g = py.networkx.scale_free_graph(int16(p.n));
 A = net.helper.py_graph2adjmat(g);
 end

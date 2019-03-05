@@ -1,4 +1,4 @@
-function A = wattsstrogatz(params)
+function A = wattsstrogatz(p)
 %Watts-Strogatz
 %   parameters
 %       n (int) The number of nodes
@@ -6,9 +6,7 @@ function A = wattsstrogatz(params)
 %           a ring topology
 %       p (float) The probability of rewiring each edge
 py.importlib.import_module('networkx');
-g = py.networkx.watts_strogatz_graph(int16(params.n),...
-    int16(params.k),...
-    params.p);
+g = py.networkx.watts_strogatz_graph(int16(p.n), int16(p.k), p.p);
 A = net.helper.py_graph2adjmat(g);
 end
 
