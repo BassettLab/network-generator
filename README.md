@@ -30,3 +30,10 @@ imagesc(n.A)
 
 ## Troubleshooting
 1. If your MATLAB can't find [networkx](https://networkx.github.io/), then see [this](https://erikreinertsen.com/python3-in-matlab/).
+
+## To-do
+Add additional topologies:
+1. Generative growth model
+2. Modular small-world networks
+3. Hierarchical modular small-world networks
+4. Graphical lasso with data
