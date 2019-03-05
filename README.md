@@ -19,7 +19,7 @@ imagesc(n.A)
 
 ## Available network topologies
 
-See topologies and their parameters [here](+generators/README.md).
+For topologies and their parameters, see [API](+generators/API.md).
 
 ### Adding topology generators
 
