@@ -49,6 +49,10 @@ imagesc(n.A)
 **m** (int) number of modules<br>
 **p** (float, default=0.8) desired fraction of k within modules
 
+**[Weighted random](https://docs.google.com/viewer?a=v&pid=sites&srcid=c2Vhcy51cGVubi5lZHV8d2VpZ2h0ZWQtbmV0d29yay10b29sYm94fGd4OjQ2MWMwYTE5ODdlODMwZmU)** `weightedrandom` <br>
+**n** (int) number of nodes<br>
+**p** (int) probability of edge/weight addition<br>
+
 ### Adding topology generators
 
 1. Write a function that generates a topology. Add to the `+generators` directory. See examples in `+generators`. Add any auxiliaury code in `+imported`.
