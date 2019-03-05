@@ -1,21 +1,26 @@
-function A = randomgeometric(params)
+function A = randomgeometric(p)
 %Random geometric
 %   parameters
 %       n (int) The number of nodes
 %       radius (float) Distance threshold value
 %       dim (int, optional) Default: 2
-%       pos (dict, optional) NOT SUPPORTED
-%           A dictionary keyed by node with node positions as values
-%           Default: 
-if ~isfield(params,'dim')
-    params.dim = 2;
+%       pos (matrix, optional) Position of nodes, m-by-dim matrix
+%           Converted to Python dictionary keyed by node with node 
+%           positions as values
+if ~isfield(p,'dim')
+    p.dim = 2;
 end
-% if ~isfield(params,'pos')
-%     params.pos = py.dict(pyargs(int16(1),py.tuple({0,1})));
-% end
+if ~isfield(p,'pos')
+    args = pyargs('dim',int16(p.dim));
+else
+    d = py.dict;
+    for i = 1 : size(p.pos)
+        d{int16(i-1)} = py.tuple(int16(p.pos(i,:)-1));
+    end
+    args = pyargs('dim',int16(p.dim),'pos',d);
+end
 py.importlib.import_module('networkx');
-g = py.networkx.random_geometric_graph(int16(params.n),...
-    params.radius,...
-    pyargs('dim',int16(params.dim)));
+g = py.networkx.random_geometric_graph(int16(p.n), p.radius, args);
 A = net.helper.py_graph2adjmat(g);
+A = A + A' - A.*eye(size(A));
 end
