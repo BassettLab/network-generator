@@ -6,7 +6,7 @@ It uses [Python's](https://www.python.org/) [networkx](https://networkx.github.i
 ## Installation
 Make sure you have [python](https://www.python.org/downloads/) and [networkx](https://networkx.github.io/) installed.
 
-Clone `network-generator` to your MATLAB environment.
+Clone `network-generator` to your MATLAB environment. No need to add to path.
 
 ## Example
 ```
