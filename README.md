@@ -27,6 +27,7 @@ imagesc(n.A)
 
 1. Write a function that generates a topology. Add to the `+generators` directory. See examples in `+generators`.
 2. Call the function in the `switch` statement in the `generate()` function.
+3. Update this README file.
 
 ## Troubleshooting
 1. If your MATLAB can't find [networkx](https://networkx.github.io/), then see [this](https://erikreinertsen.com/python3-in-matlab/).
