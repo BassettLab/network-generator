@@ -44,7 +44,7 @@
 **e** (float) connection density fall-off per level <br>
 **sz_cl** (int) size of clusters (power of 2)
 
-<a name="generative"/>**[Generative graph](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `generative` <br>
+<a name="generative"/>**[Generative network](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `generative` <br>
 **sseed** (int, n-by-n) seed connections <br>
 **d** (float, n-by-n) Euclidean distance/fiber length matrix <br>
 **m** (int) number of connections that should be present in final synthetic network <br>
@@ -55,7 +55,7 @@
 
 Example:
 ```
-load demo_generative_models_data
+load +net/+imported/demo_generative_models_data
 n = net.generate('topology','generative',...
   'seed',Aseed,...
   'd',D, ...
