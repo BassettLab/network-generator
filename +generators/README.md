@@ -1,13 +1,11 @@
 ## Application program interface
 
-<a name="erdosrenyi"/><br>
-**[Erdos-Renyi network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html)** `erdosrenyi` <br>
+<a name="erdosrenyi"></a>**[Erdos-Renyi network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html)** `erdosrenyi` <br>
 **n** (int) number of nodes <br>
 **p** (double) probability for edge creation <br>
 **directed** (boolean, default=false) <br>
 
-<a name="weightedrandom"/><br>
-**[Weighted random network](https://docs.google.com/viewer?a=v&pid=sites&srcid=c2Vhcy51cGVubi5lZHV8d2VpZ2h0ZWQtbmV0d29yay10b29sYm94fGd4OjQ2MWMwYTE5ODdlODMwZmU)** `weightedrandom` <br>
+<a name="weightedrandom"></a>**[Weighted random network](https://docs.google.com/viewer?a=v&pid=sites&srcid=c2Vhcy51cGVubi5lZHV8d2VpZ2h0ZWQtbmV0d29yay10b29sYm94fGd4OjQ2MWMwYTE5ODdlODMwZmU)** `weightedrandom` <br>
 **n** (int) number of nodes<br>
 **p** (int) probability of edge/weight addition<br>
 
