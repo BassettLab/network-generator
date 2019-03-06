@@ -29,6 +29,7 @@ For topologies and their parameters, see [API](+generators/README.md).
 * [Modular small-world network](+generators/README.md#modularsmallworld)
 * [Hierarchical modular small-world network](+generators/README.md#hierarchicalmodularsmallworld)
 * [Generative network](+generators/README.md#generative)
+* [Graphical lasso](+generators/README.md#graphicallasso)
 
 ### Adding topology generators
 
