@@ -19,7 +19,17 @@ imagesc(n.A)
 
 ## Available network topologies
 
-For topologies and their parameters, see [API](+generators/API.md).
+For topologies and their parameters, see [API](+generators/README.md).
+* [Erdos-Renyi network](+generators/README.md#erdosrenyi)
+* [Weighted random network](+generators/README.md#weightedrandom)
+* [Random geometric network](+generators/README.md#randomgeometric)
+* [Watts-Strogatz network](+generators/README.md#wattsstrogatz)
+* [Scale-free network](+generators/README.md#scalefree)
+* [Modular network](+generators/README.md#modular)
+* [Modular small-world network](+generators/README.md#modularsmallworld)
+* [Hierarchical modular small-world network](+generators/README.md#hierarchicalmodularsmallworld)
+* [Generative network](+generators/README.md#generative)
+* [Graphical lasso](+generators/README.md#graphicallasso)
 
 ### Adding topology generators
 

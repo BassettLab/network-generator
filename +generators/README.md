@@ -1,26 +1,26 @@
 ## Application program interface
 
-**[Erdos-Renyi network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html)** `erdosrenyi` <br> <a href="erdosrenyi">
+<a name="erdosrenyi"/>**[Erdos-Renyi network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html)** `erdosrenyi` <br>
 **n** (int) number of nodes <br>
 **p** (double) probability for edge creation <br>
 **directed** (boolean, default=false) <br>
 
-**[Weighted random network](https://docs.google.com/viewer?a=v&pid=sites&srcid=c2Vhcy51cGVubi5lZHV8d2VpZ2h0ZWQtbmV0d29yay10b29sYm94fGd4OjQ2MWMwYTE5ODdlODMwZmU)** `weightedrandom` <br> <a href="weightedrandom">
+<a name="weightedrandom"/>**[Weighted random network](https://docs.google.com/viewer?a=v&pid=sites&srcid=c2Vhcy51cGVubi5lZHV8d2VpZ2h0ZWQtbmV0d29yay10b29sYm94fGd4OjQ2MWMwYTE5ODdlODMwZmU)** `weightedrandom` <br>
 **n** (int) number of nodes<br>
 **p** (int) probability of edge/weight addition<br>
 
-**[Random geometric network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.geometric.random_geometric_graph.html)** `randomgeometric` <br> <a href="randomgeometric">
+<a name="randomgeometric"/>**[Random geometric network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.geometric.random_geometric_graph.html)** `randomgeometric` <br>
 **n** (int) number of nodes <br>
 **radius** (float) distance threshold value <br>
 **dim** (int, default=2) dimension of graph <br>
 **pos** (float, default=None) position of nodes, m-by-dim matrix
 
-**[Watts-Strogatz graphh](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.watts_strogatz_graph.html)** `wattsstrogatz` <br> <a href="wattsstrogatz">
+<a name="wattsstrogatz"/>**[Watts-Strogatz graphh](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.watts_strogatz_graph.html)** `wattsstrogatz` <br>
 **n** (int) number of nodes <br>
 **k** (int) each node is joined with its k nearest neighbors in a ring topology <br>
 **p** (float) the probability of rewiring each edge
 
-**[Scale-free network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.directed.scale_free_graph.html)** `scalefree` <br> <a href="scalefree">
+<a name="scalefree"/>**[Scale-free network](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.directed.scale_free_graph.html)** `scalefree` <br>
 **n** (integer) number of nodes <br>
 **alpha** (float, default=0.41) probability for adding a new node connected to an existing node chosen randomly according to the in-degree distribution<br>
 **beta** (float, default=0.54) probability for adding an edge between two existing nodes <br>
@@ -28,23 +28,23 @@
 **delta_in** (float, default=0.2) bias for choosing ndoes from in-degree distribution <br>
 **delta_out** (float, default=0) bias for choosing ndoes from out-degree distribution
 
-**[Modular network](https://arxiv.org/pdf/1706.05117.pdf)** `modular` <br> <a href="modular">
+<a name="modular"/>**[Modular network](https://arxiv.org/pdf/1706.05117.pdf)** `modular` <br>
 **n** (int) number of nodes<br>
 **k** (int) desired number of edges<br>
 **m** (int) number of modules<br>
 **p** (float, default=0.8) desired fraction of k within modules
 
-**[Modular small-world network](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `modularsmallworld` <br> <a href="modularsmallworld">
+<a name="modularsmallworld"/>**[Modular small-world network](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `modularsmallworld` <br>
 **n** (int) number of nodes (must be power of 2) <br>
 **k** (int) number of edges <br>
 **sz_cl** (int) size of clusters (power of 2) <br>
 
-**[Hierarchical modular small-world network](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `hierarchicalmodularsmallworld` <br> <a href="hierarchicalmodularsmallworld">
+<a name="hierarchicalmodularsmallworld"/>**[Hierarchical modular small-world network](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `hierarchicalmodularsmallworld` <br>
 **mx_lvl** (int) number of hierarchical levels, `N = 2^mx_lvl` <br>
 **e** (float) connection density fall-off per level <br>
 **sz_cl** (int) size of clusters (power of 2)
 
-**[Generative graph](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `generative` <br> <a href="generative">
+<a name="generative"/>**[Generative graph](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `generative` <br>
 **A** (binary network) seed connections <br>
 **D** (float, matrix) Euclidean distance/fiber length matrix <br>
 **m** (int) number of connections that should be present in final synthetic network <br>
@@ -67,3 +67,7 @@ Full list of model types (each model type realizes a different generative rule):
 11. 'deg-max'       maximum degree
 12. 'deg-diff'      difference in degree
 13. 'deg-prod'      product of degree
+
+<a name="graphicallasso"/>**[Graphical lasso](http://statweb.stanford.edu/~tibs/glasso/)** `graphicallasso` <br>
+in development
+
