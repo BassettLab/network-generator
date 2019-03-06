@@ -1,6 +1,6 @@
-function A = generative(p)
-%generative
-%   Generates synthetic networks using the models described in the study 
+function A = generativegrowth(p)
+%Generative growth model
+%   Generates synthetic networks using the models described in the study
 %       by Betzel et al (2016) in Neuroimage.
 %       See +imported/generative_model for usage.
 %   parameters
@@ -9,11 +9,11 @@ function A = generative(p)
 %       m (int) number of connections that should be present in
 %           final synthetic network
 %       modeltype (string) specifies the generative rule (see below)
-%       modelvar (array of string wrapped in a cell) specifies whether the 
-%           generative rules are based on power-law or exponential 
+%       modelvar (array of string wrapped in a cell) specifies whether the
+%           generative rules are based on power-law or exponential
 %           relationship ('powerlaw' or 'exponential')
-%       params (either a vector in the case of the geometric model or 
-%           a matrix for all other models) parameters at which the 
+%       params (either a vector in the case of the geometric model or
+%           a matrix for all other models) parameters at which the
 %           model should be evaluated
 %       epsilon (float, default = 1e-5) the baseline probability of forming
 %           a particular connection (should be a very small number)
