@@ -8,7 +8,9 @@ Clone `network-generator` to your MATLAB environment. No need to add to path.
 
 You need [python](https://www.python.org/downloads/) and [networkx](https://networkx.github.io/) installed for some topologies (see [API](+generators/README.md)).
 
-## Example
+## Use
+Call `net.generate()`, and specify the topology and any other parameters in name-value pairs (à la `plot`).
+#### Example
 ```
 n = net.generate('topology','erdosrenyi',...
   'n',20,...
