@@ -67,3 +67,7 @@ Full list of model types (each model type realizes a different generative rule):
 11. 'deg-max'       maximum degree
 12. 'deg-diff'      difference in degree
 13. 'deg-prod'      product of degree
+
+<a name="graphicallasso"/>**[Graphical lasso](http://statweb.stanford.edu/~tibs/glasso/)** `graphicallasso` <br>
+in development
+
