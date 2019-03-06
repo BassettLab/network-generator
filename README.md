@@ -27,7 +27,7 @@ For topologies and their parameters, see [API](+generators/README.md).
 * [Scale-free network](+generators/README.md#scalefree)
 * [Modular network](+generators/README.md#modular)
 * [Modular small-world network](+generators/README.md#modularsmallworld)
-* [Hierarchical modular small-world network](+generators/README.md#hierarchicalmodularsmallworld)
+* [Hierarchical modular small-world network](+generators/README.md#hiermodsmallworld)
 * [Generative network](+generators/README.md#generative)
 * [Graphical lasso](+generators/README.md#graphicallasso)
 
@@ -42,6 +42,4 @@ For topologies and their parameters, see [API](+generators/README.md).
 ## To-do
 Add additional topologies:
 1. Directed versions of topologies
-2. Generative growth model
-3. Graphical lasso with data
-
+2. Graphical lasso with data

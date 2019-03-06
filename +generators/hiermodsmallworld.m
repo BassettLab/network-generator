@@ -1,4 +1,4 @@
-function A = hierarchicalmodularsmallworld(p)
+function A = hiermodsmallworld(p)
 %Hierarchical modular small-world network
 %   parameters
 %       mx_lvl (int) number of hierarchical levels, N = 2^mx_lvl

@@ -39,19 +39,31 @@
 **k** (int) number of edges <br>
 **sz_cl** (int) size of clusters (power of 2) <br>
 
-<a name="hierarchicalmodularsmallworld"/>**[Hierarchical modular small-world network](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `hierarchicalmodularsmallworld` <br>
+<a name="hiermodsmallworld"/>**[Hierarchical modular small-world network](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `hiermodsmallworld` <br>
 **mx_lvl** (int) number of hierarchical levels, `N = 2^mx_lvl` <br>
 **e** (float) connection density fall-off per level <br>
 **sz_cl** (int) size of clusters (power of 2)
 
 <a name="generative"/>**[Generative graph](https://sites.google.com/site/bctnet/null#TOC-generative-network-models)** `generative` <br>
-**A** (binary network) seed connections <br>
-**D** (float, matrix) Euclidean distance/fiber length matrix <br>
+**sseed** (int, n-by-n) seed connections <br>
+**d** (float, n-by-n) Euclidean distance/fiber length matrix <br>
 **m** (int) number of connections that should be present in final synthetic network <br>
 **modeltype** (string) specifies the generative rule (see below) <br>
-**modelvar** (string, 'powerlaw'} or {'exponential') basis for generative rules <br>
-**params** either a vector (in the case of the geometric model) or a matrix (for all other models) of parameters at which the model should be evaluated <br>
-**epsilon** (float, default=1e-5) the baseline probability of forming a particular connection (should be a very small number)
+**modelvar** (array of string wrapped in a cell) basis for generative rules, e.g., [{'powerlaw'}, {'exponential'}] <br>
+**params** (either a vector in the case of the geometric model or a matrix for all other models) parameters at which the model should be evaluated <br>
+**epsilon** (float, default=1e-5) the baseline probability of forming a particular connection (should be a very small number) <br>
+
+Example:
+```
+load demo_generative_models_data
+n = net.generate('topology','generative',...
+  'seed',Aseed,...
+  'd',D, ...
+  'm',nnz(A)/2,...
+  'modeltype','neighbors',...
+  'modelvar',[{'powerlaw'},{'powerlaw'}],...
+  'params',[-2,0.2; -5,1.2; -1,1.5]);
+```
 
 Full list of model types (each model type realizes a different generative rule):
 1.  'sptl'          spatial model
@@ -70,4 +82,3 @@ Full list of model types (each model type realizes a different generative rule):
 
 <a name="graphicallasso"/>**[Graphical lasso](http://statweb.stanford.edu/~tibs/glasso/)** `graphicallasso` <br>
 in development
-
