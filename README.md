@@ -4,9 +4,9 @@ MATLAB package to generate networks.
 For some standard networks, it uses [Python's](https://www.python.org/) [networkx](https://networkx.github.io/) library for standard network generation. For other networks, it borrows code from other sources (e.g., [Ann's website](https://sites.google.com/a/seas.upenn.edu/weighted-network-toolbox) and the [Brain Connectivity Toolbox](https://sites.google.com/site/bctnet)). You can also easily add other methods for generating networks.
 
 ## Installation
-Make sure you have [python](https://www.python.org/downloads/) and [networkx](https://networkx.github.io/) installed.
-
 Clone `network-generator` to your MATLAB environment. No need to add to path.
+
+You need [python](https://www.python.org/downloads/) and [networkx](https://networkx.github.io/) installed for some topologies (see [API](+generators/README.md)).
 
 ## Example
 ```
@@ -41,5 +41,6 @@ For topologies and their parameters, see [API](+generators/README.md).
 
 ## To-do
 Add additional topologies:
-1. Directed versions of topologies
-2. Graphical lasso with data
+1. Graphical lasso with data
+2. Directed versions of topologies
+3. Weighting
