@@ -21,6 +21,7 @@ imagesc(n.A)
 
 For topologies and their parameters, see [API](+generators/README.md).
 * [Erdos-Renyi network](+generators/README.md#erdosrenyi)
+* [Random network](+generators/README.md#random)
 * [Weighted random network](+generators/README.md#weightedrandom)
 * [Random geometric network](+generators/README.md#randomgeometric)
 * [Watts-Strogatz network](+generators/README.md#wattsstrogatz)

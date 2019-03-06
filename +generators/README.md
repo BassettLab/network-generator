@@ -3,11 +3,16 @@
 <a name="erdosrenyi"/>**Erdos-Renyi network** `erdosrenyi` [networkx](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html) <br>
 **n** (int) number of nodes <br>
 **p** (double) probability for edge creation <br>
-**directed** (boolean, default=false) <br>
+**directed** (boolean, default=false)
+
+<a name="random"/>**Random network** `random` [BCT](https://sites.google.com/site/bctnet/null#TOC-generative-network-models) <br>
+**n** (int) number of nodes<br>
+**k** (int) number of edges<br>
+**directed** (boolean)
 
 <a name="weightedrandom"/>**Weighted random network** `weightedrandom` [Ann's toolbox](https://docs.google.com/viewer?a=v&pid=sites&srcid=c2Vhcy51cGVubi5lZHV8d2VpZ2h0ZWQtbmV0d29yay10b29sYm94fGd4OjQ2MWMwYTE5ODdlODMwZmU) <br>
 **n** (int) number of nodes<br>
-**p** (int) probability of edge/weight addition<br>
+**p** (int) probability of edge/weight addition
 
 <a name="randomgeometric"/>**Random geometric network** `randomgeometric` [networkx](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.geometric.random_geometric_graph.html) <br>
 **n** (int) number of nodes <br>
@@ -45,7 +50,7 @@
 **sz_cl** (int) size of clusters (power of 2)
 
 <a name="generative"/>**Generative growth network** `generativegrowth` [BCT](https://sites.google.com/site/bctnet/null#TOC-generative-network-models) <br>
-**sseed** (int, n-by-n) seed connections <br>
+**seed** (int, n-by-n) seed connections <br>
 **d** (float, n-by-n) Euclidean distance/fiber length matrix <br>
 **m** (int) number of connections that should be present in final synthetic network <br>
 **modeltype** (string) specifies the generative rule (see below) <br>
