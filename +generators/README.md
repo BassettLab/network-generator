@@ -85,5 +85,14 @@ Full list of model types (each model type realizes a different generative rule):
 12. 'deg-diff'      difference in degree
 13. 'deg-prod'      product of degree
 
-<a name="graphicallasso"/>**Graphical lasso** `graphicallasso` [Friedman et al. 2007](http://statweb.stanford.edu/~tibs/glasso/) <br>
+<a name="autoregressive"/>**Multivariate autoregressive model** `autoregressive` [arfit](https://www.mathworks.com/matlabcentral/fileexchange/174-arfit), [Neumaier et al. 2001](https://www.mat.univie.ac.at/~neum/ms/arfit.pdf) <br>
+**v** (float, `n`-by-`m`) time series with `m` variables & `n` observations <br>
+**pmin** (int) `pmin <= p <= pmax` for order parameter p <br>
+**pmax** (int) <br>
+**selector** (string, default=``'sbc'``) order selection criteria <br>
+  `'sbc'` Schwarz's Bayesian Criterion<br>
+  `'fpe'` Akaike's Final Prediction Error criterion<br>
+**no_const** (string, default=none) if `'zero'`, constant bias term is set to 0
+
+<a name="graphicallasso"/>**Graphical lasso** `graphicallasso` [Friedman et al. 2007](http://statweb.stanford.edu/~tibs/glasso/)<br>
 in development
