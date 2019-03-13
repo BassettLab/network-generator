@@ -1,4 +1,4 @@
-function A = randomgeometric(p)
+function d = randomgeometric(p)
 %Random geometric
 %   parameters
 %       n (int) The number of nodes
@@ -19,6 +19,6 @@ else
 end
 py.importlib.import_module('networkx');
 g = py.networkx.random_geometric_graph(int16(p.n), p.radius, args);
-A = net.helper.py_graph2adjmat(g);
-A = A + A' - A.*eye(size(A));
+d.A = net.helper.py_graph2adjmat(g);
+d.A = d.A + d.A' - d.A.*eye(size(d.A));
 end

@@ -1,4 +1,4 @@
-function A = generativegrowth(p)
+function d = generativegrowth(p)
 %Generative growth model
 %   Generates synthetic networks using the models described in the study
 %       by Betzel et al (2016) in Neuroimage.
@@ -37,9 +37,9 @@ edges = net.imported.generative_model(p.seed, p.d, p.m, p.modeltype,...
     p.modelvar, p.params, p.epsilon);
 n = size(p.seed,1);
 nparams = size(p.params,1);
-A = zeros(n,n,nparams);
+d.A = zeros(n,n,nparams);
 for i = 1 : nparams
     a = zeros(n); a(edges(:,i)) = 1; a = a + a';
-    A(:,:,i) = a;
+    d.A(:,:,i) = a;
 end
 end

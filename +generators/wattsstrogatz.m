@@ -1,4 +1,4 @@
-function A = wattsstrogatz(p)
+function d = wattsstrogatz(p)
 %Watts-Strogatz, symmetric
 %   parameters
 %       n (int) The number of nodes
@@ -7,7 +7,7 @@ function A = wattsstrogatz(p)
 %       p (float) The probability of rewiring each edge
 py.importlib.import_module('networkx');
 g = py.networkx.watts_strogatz_graph(int16(p.n), int16(p.k), p.p);
-A = net.helper.py_graph2adjmat(g);
-A = A + A' - A.*eye(size(A));
+d.A = net.helper.py_graph2adjmat(g);
+d.A = d.A + d.A' - d.A.*eye(size(d.A));
 end
 

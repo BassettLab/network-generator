@@ -1,4 +1,4 @@
-function A = modular(p)
+function d = modular(p)
 %Modular
 %   parameters
 %       n (int) The number of nodes
@@ -9,6 +9,6 @@ function A = modular(p)
 %       directed (boolean; optional, default=false) not yet supported
 if ~isfield(p,'p'); p.p = 0.8; end
 if ~isfield(p,'directed'); p.directed = false; end
-A = net.imported.modular_network(p.n, p.k, p.m, p.p);
+d.A = net.imported.modular_network(p.n, p.k, p.m, p.p);
 end
 

@@ -1,4 +1,4 @@
-function A = erdosrenyi(p)
+function d = erdosrenyi(p)
 %Erdos-Renyi
 %   parameters
 %       n (int) The number of nodes
@@ -8,9 +8,9 @@ if ~isfield(p,'directed'); p.directed = false; end
 py.importlib.import_module('networkx');
 g = py.networkx.erdos_renyi_graph(int16(p.n), p.p, ...
     pyargs('directed',p.directed));
-A = net.helper.py_graph2adjmat(g);
+d.A = net.helper.py_graph2adjmat(g);
 if ~p.directed
-    A = A + A' - A.*eye(size(A));
+    d.A = d.A + d.A' - d.A.*eye(size(d.A));
 end
 end
 

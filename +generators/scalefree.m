@@ -1,4 +1,4 @@
-function A = scalefree(p)
+function d = scalefree(p)
 %Scale-free directed graph
 %   parameters
 %       n (integer) Number of nodes in graph
@@ -27,5 +27,5 @@ py.importlib.import_module('networkx');
 g = py.networkx.scale_free_graph(int16(p.n),pyargs(...
     'alpha',p.alpha,'beta',p.beta,'gamma',p.gamma,'delta_in',p.delta_in,...
     'delta_out',p.delta_out));
-A = net.helper.py_graph2adjmat(g);
+d.A = net.helper.py_graph2adjmat(g);
 end
