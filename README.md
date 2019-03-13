@@ -44,7 +44,6 @@ For topologies and their parameters, see [API](+generators/README.md).
 
 ## To-do
 Add additional topologies:
-1. Graphical lasso from data
-2. Effective connectivity from data
-3. Directed versions of topologies
-3. Network weighting
+1. Directed versions of topologies
+2. Network weighting
+3. Graphical lasso from data
