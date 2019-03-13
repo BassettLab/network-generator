@@ -1,5 +1,5 @@
 # network-generator
-MATLAB package to generate networks.
+MATLAB package to generate synthetic and empirical networks.
 
 For some standard networks, it uses [Python's](https://www.python.org/) [networkx](https://networkx.github.io/) library for standard network generation. For other networks, it borrows code from other sources (e.g., [Ann's website](https://sites.google.com/a/seas.upenn.edu/weighted-network-toolbox) and the [Brain Connectivity Toolbox](https://sites.google.com/site/bctnet)). You can also easily add other methods for generating networks.
 
@@ -34,16 +34,16 @@ For topologies and their parameters, see [API](+generators/README.md).
 * [Multivariate autoregressive model](+generators/README.md#autoregressive)
 * [Graphical lasso](+generators/README.md#graphicallasso)
 
-### Adding topology generators
+#### BYO topologies
 
 1. Write a function that generates a topology, and add to the `+generators` directory (see examples [there](+generators)). Add any auxiliaury code in `+imported`.
 2. Update `+generators/README.md`.
+3. Submit a [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request) if you want to share your code.
 
 ## Troubleshooting
 1. If your MATLAB can't find [networkx](https://networkx.github.io/), then see [this](https://erikreinertsen.com/python3-in-matlab/).
 
 ## To-do
-Add additional topologies:
 1. Directed versions of topologies
 2. Network weighting
 3. Graphical lasso from data

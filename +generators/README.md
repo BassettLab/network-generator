@@ -46,7 +46,8 @@
 
 <a name="hiermodsmallworld"/>**Hierarchical modular small-world network** `hiermodsmallworld` [BCT](https://sites.google.com/site/bctnet/null#TOC-generative-network-models) <br>
 **mx_lvl** (int) number of hierarchical levels, `N = 2^mx_lvl` <br>
-**e** (float) connection density fall-off per level <br>
+**e** (float) connection density fall-off per level (e>1 for fall-off and not fully connected)<br>
+All modules are fully connected and connection density decays as 1/(Ee^n), with n = index of hierarchical level. <br>
 **sz_cl** (int) size of clusters (power of 2)
 
 <a name="generative"/>**Generative growth network** `generativegrowth` [BCT](https://sites.google.com/site/bctnet/null#TOC-generative-network-models) <br>
