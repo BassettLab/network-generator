@@ -95,5 +95,10 @@ Full list of model types (each model type realizes a different generative rule):
   `'fpe'` Akaike's Final Prediction Error criterion<br>
 **no_const** (string, default=none) if `'zero'`, constant bias term is set to 0
 
+<a name="euclidean"/>**Euclidean distance** `euclidean` <br>
+**x** (float) vector of position in x-axis <br>
+**y** (float) vector of position in y-axis <br>
+**z** (float, default=`0`) vector of position in z-axis
+
 <a name="graphicallasso"/>**Graphical lasso** `graphicallasso` [Friedman et al. 2007](http://statweb.stanford.edu/~tibs/glasso/)<br>
 in development

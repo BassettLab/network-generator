@@ -32,6 +32,7 @@ For topologies and their parameters, see [API](+generators/README.md).
 * [Hierarchical modular small-world network](+generators/README.md#hiermodsmallworld)
 * [Generative growth network](+generators/README.md#generative)
 * [Multivariate autoregressive model](+generators/README.md#autoregressive)
+* [Euclidean distance](+generators/README.md#euclidean)
 * [Graphical lasso](+generators/README.md#graphicallasso)
 
 #### BYO topologies
