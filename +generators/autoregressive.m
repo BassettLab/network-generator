@@ -11,24 +11,30 @@ function d = autoregressive(p)
 %           if 'zero, constant bias term is set to 0
 %   returns d
 %           model: v(t) = w + sum_{l=1}^p[A_l*v(t-l)] + e
-%       A (m-by-mp) coefficients
+%       A (m-by-m-by-p) coefficients
 %       w (m-by-1) intercepts
 %       c (m-by-m) e = noise(C)...
 %       sbc (1-by-p) order selection criterion
 %       fpe (1-by-p)
 %       th
 if isfield(p, 'selector') && isfield(p, 'no_const')
-    [d.w, d.A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
+    [d.w, A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
         p.v, p.pmin, p.pmax, p.selector, p.no_const);
 elseif isfield(p, 'selector')
-    [d.w, d.A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
+    [d.w, A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
         p.v, p.pmin, p.pmax, p.selector);
 elseif isfield(p, 'no_const')
-    [d.w, d.A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
+    [d.w, A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
         p.v, p.pmin, p.pmax, p.no_const);
 else
-    [d.w, d.A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
+    [d.w, A, d.c, d.sbc, d.fpe, d.th] = net.imported.arfit.arfit(...
         p.v, p.pmin, p.pmax);
+end
+m = size(A,1);
+p = size(A,2);
+d.A = zeros(m,m,p/m);
+for i = 1 : p/m
+    d.A(:,:,i) = A(:, (i-1)*m+1 : i*m );
 end
 end
 
