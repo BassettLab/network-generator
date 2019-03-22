@@ -3,7 +3,7 @@ function network = generate(topology,varargin)
 %   topology (string)
 %   returns a struct with adjacency matrix in 'A' and other parameters
 %   See README for usage
-network = struct;
+network.topology = topology;
 for pair = reshape(varargin,2,[])
     network.(lower(pair{1})) = pair{2};
 end
