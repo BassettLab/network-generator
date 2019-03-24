@@ -9,13 +9,21 @@ Clone `network-generator` to your MATLAB environment. **Rename directory to `+ne
 You need [python](https://www.python.org/downloads/) and [networkx](https://networkx.github.io/) installed for some topologies (see [API](+generators/README.md)).
 
 ## Use
-Call `net.generate()`, and specify the topology and any other parameters in name-value pairs (à la `plot`). For example,
-```
+To generate a topology, call `net.generate()`. Specify the topology and any other parameters in name-value pairs (à la `plot`). For example,
+``` MATLAB
 n = net.generate('erdosrenyi',...
   'n',20,...
   'p',0.3,...
   'directed',true);
 imagesc(n.A)
+```
+To generate a weight distribution, call `net.distr_weights()`. Specify the topology, the weight distribution, and any other parameters in name-value pairs. For example,
+``` MATLAB
+w = net.distr_weights(n.A,'truncnorm',...
+    'mu',0,...
+    'sigma',0.1,...
+    'range',[0 2]);
+histogram(w.A(w.A>0))
 ```
 
 ## Available network topologies
@@ -35,10 +43,17 @@ For topologies and their parameters, see [API](+generators/README.md).
 * [Euclidean distance](+generators/README.md#euclidean)
 * [Graphical lasso](+generators/README.md#graphicallasso)
 
-#### BYO topologies
-
+###### BYO topologies
 1. Write a function that generates a topology, and add to the `+generators` directory (see examples [there](+generators)). Add any auxiliaury code in `+imported`.
 2. Update `+generators/README.md`.
+3. Submit a [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request) if you want to share your code.
+
+## Available weight distributions
+* [Truncated normal distribution](+generators/README.md#truncnorm)
+
+###### BYO weighting distributions
+1. Write a function that generates a distribution of weights, and add to the `+weights` directory (see examples [there](+weights)).
+2. Update `+weights/README.md`.
 3. Submit a [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request) if you want to share your code.
 
 ## Troubleshooting

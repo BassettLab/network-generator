@@ -1,4 +1,4 @@
-## Application program interface
+## Topology API
 
 <a name="erdosrenyi"/>**Erdos-Renyi network** `erdosrenyi` [networkx](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html) <br>
 **n** (int) number of nodes <br>
