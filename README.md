@@ -14,7 +14,7 @@ To generate a topology, call `net.generate()`. Specify the topology and any othe
 n = net.generate('erdosrenyi',...
   'n',20,...
   'p',0.3,...
-  'directed',true);
+  'dir',true);
 imagesc(n.A)
 ```
 To generate a weight distribution, call `net.distr_weights()`. Specify the topology, the weight distribution, and any other parameters in name-value pairs. For example,
@@ -58,8 +58,3 @@ For topologies and their parameters, see [API](+generators/README.md).
 
 ## Troubleshooting
 1. If your MATLAB can't find [networkx](https://networkx.github.io/), then see [this](https://erikreinertsen.com/python3-in-matlab/).
-
-## To-do
-1. Directed versions of topologies
-2. Network weighting
-3. Graphical lasso from data

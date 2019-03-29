@@ -3,9 +3,9 @@ function d = random(p)
 %   parameters
 %       n (int) number of nodes
 %       k (int) number of edges
-%       directed (boolean, default=false)
-if ~isfield(p,'directed'); p.directed = false; end
-if p.directed
+%       dir (boolean, default=false) directed graph
+if ~isfield(p,'dir'); p.dir = false; end
+if p.dir
   d.A = net.imported.makerandCIJ_dir(p.n,p.k);
 else
   d.A = net.imported.makerandCIJ_und(p.n,p.k);

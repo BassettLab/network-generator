@@ -3,12 +3,12 @@
 <a name="erdosrenyi"/>**Erdos-Renyi network** `erdosrenyi` [networkx](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html) <br>
 **n** (int) number of nodes <br>
 **p** (double) probability for edge creation <br>
-**directed** (boolean, default=false)
+**dir** (boolean, default=false) directed graph
 
 <a name="random"/>**Random network** `random` [BCT](https://sites.google.com/site/bctnet/null#TOC-generative-network-models) <br>
 **n** (int) number of nodes<br>
 **k** (int) number of edges<br>
-**directed** (boolean)
+**dir** (boolean) directed graph
 
 <a name="weightedrandom"/>**Weighted random network** `weightedrandom` [Ann's toolbox](https://docs.google.com/viewer?a=v&pid=sites&srcid=c2Vhcy51cGVubi5lZHV8d2VpZ2h0ZWQtbmV0d29yay10b29sYm94fGd4OjQ2MWMwYTE5ODdlODMwZmU) <br>
 **n** (int) number of nodes<br>
@@ -24,7 +24,7 @@
 **n** (int) number of nodes <br>
 **k** (int) each node is joined with its k nearest neighbors in a ring topology <br>
 **p** (float) the probability of rewiring each edge
-**directed** (boolean, default=false)
+**dir** (boolean, default=false)
 
 <a name="scalefree"/>**Scale-free network** `scalefree` [networkx](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.directed.scale_free_graph.html) <br>
 **n** (integer) number of nodes <br>
@@ -39,7 +39,7 @@
 **k** (int) desired number of edges<br>
 **m** (int) number of modules<br>
 **p** (float, default=0.8) desired fraction of k within modules
-**directed** (boolean, default=false)
+**dir** (boolean, default=false) directed graph
 
 <a name="modularsmallworld"/>**Modular small-world network** `modularsmallworld` [BCT](https://sites.google.com/site/bctnet/null#TOC-generative-network-models) <br>
 **n** (int) number of nodes (must be power of 2) <br>
