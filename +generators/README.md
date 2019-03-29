@@ -39,6 +39,7 @@
 **k** (int) desired number of edges<br>
 **m** (int) number of modules<br>
 **p** (float, default=0.8) desired fraction of k within modules
+**directed** (boolean, default=false)
 
 <a name="modularsmallworld"/>**Modular small-world network** `modularsmallworld` [BCT](https://sites.google.com/site/bctnet/null#TOC-generative-network-models) <br>
 **n** (int) number of nodes (must be power of 2) <br>

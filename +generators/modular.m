@@ -4,11 +4,17 @@ function d = modular(p)
 %       n (int) The number of nodes
 %       k (int) desired number of edges
 %       m (int) number of modules
-%       p (float; optional, default=0.8)
+%       p (float; default=0.8)
 %           desired fraction of k within modules
-%       directed (boolean; optional, default=false) not yet supported
+%       directed (boolean; default=false)
 if ~isfield(p,'p'); p.p = 0.8; end
 if ~isfield(p,'directed'); p.directed = false; end
-d.A = net.imported.modular_network(p.n, p.k, p.m, p.p);
+A1 = net.imported.modular_network(p.n, p.k, p.m, p.p);
+if p.directed
+    A2 = net.imported.modular_network(p.n, p.k, p.m, p.p);
+    d.A = triu(A1) + diag(A1) + triu(A2)';
+else
+    d.A = A1;
+end
 end
 
