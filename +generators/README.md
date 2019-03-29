@@ -24,6 +24,7 @@
 **n** (int) number of nodes <br>
 **k** (int) each node is joined with its k nearest neighbors in a ring topology <br>
 **p** (float) the probability of rewiring each edge
+**directed** (boolean, default=false)
 
 <a name="scalefree"/>**Scale-free network** `scalefree` [networkx](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.directed.scale_free_graph.html) <br>
 **n** (integer) number of nodes <br>
