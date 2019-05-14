@@ -49,7 +49,7 @@ For topologies and their parameters, see [API](+generators/README.md).
 3. Submit a [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request) if you want to share your code.
 
 ## Available weight distributions
-* [Truncated normal distribution](+generators/README.md#truncnorm)
+* [Truncated normal distribution](+weights/README.md#truncnorm)
 
 ###### BYO weighting distributions
 1. Write a function that generates a distribution of weights, and add to the `+weights` directory (see examples [there](+weights)).
