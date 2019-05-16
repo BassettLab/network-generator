@@ -5,3 +5,4 @@
 **mu** (float) mean <br>
 **sigma** (float) variance <br>
 **range** (float) [min max]
+

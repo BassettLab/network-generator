@@ -36,5 +36,6 @@ d.A = zeros(m,m,p/m);
 for i = 1 : p/m
     d.A(:,:,i) = A(:, (i-1)*m+1 : i*m );
 end
+d.Asum = sum(d.A,3);
 end
 
