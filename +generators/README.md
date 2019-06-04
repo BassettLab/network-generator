@@ -37,7 +37,7 @@
 <a name="modular"/>**Modular network** `modular` [Wu-Yan et al. 2018](https://link.springer.com/article/10.1007/s00332-018-9448-z) <br>
 **n** (int) number of nodes<br>
 **k** (int) desired number of edges<br>
-**m** (int) number of modules<br>
+**m** (int) number of modules, n/m should be an integer<br>
 **p** (float, default=0.8) desired fraction of k within modules
 **dir** (boolean, default=false) directed graph
 

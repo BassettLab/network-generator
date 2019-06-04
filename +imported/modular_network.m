@@ -2,8 +2,13 @@ function [a,Kpossible] = modular_network(N,K,M,P)
 % adapted from Wu Yan, 2018
 % N = number of nodes;
 % K = desired number of edges;
-% M = number of modules;
+% M = number of modules; N/M should be an integer
 % P = density on Kpossible (possible edges within modules)
+
+if floor(N/M) ~= N/M
+    error(['Error: `n=' num2str(N) '` should be a multiple of `m=' ...
+        num2str(M) '`.'])
+end
 
 Sz = N/M;
 
