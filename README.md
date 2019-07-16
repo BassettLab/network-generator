@@ -42,7 +42,7 @@ For topologies and their parameters, see [API](+generators/README.md).
 * [Multivariate autoregressive model](+generators/README.md#autoregressive)
 * [Euclidean distance](+generators/README.md#euclidean)
 * [Graphical lasso](+generators/README.md#graphicallasso)
-* [Weighted Stochastic Block Model](+generators/README.md#wsbm)
+* [Weighted Stochastic Block Model](+generators/README.md#wsbm_gen)
 
 ###### BYO topologies
 1. Write a function that generates a topology, and add to the `+generators` directory (see examples [there](+generators)). Add any auxiliaury code in `+imported`.
