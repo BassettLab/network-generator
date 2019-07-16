@@ -2,13 +2,13 @@ function d = wsbm_gen(p)
 % wsbm_gen(p) generates synthetic data sets from the WSBM.
 %   parameters p
 %   Inputs:
-%       e_truth - Distr Struct or Distr Name              (see setup_distr)
+%       w_truth - Distr Struct or Distr Name              (see setup_distr)
 %       e_truth - a *discrete* Distr Struct or Distr Name (see setup_distr)
 %       r       - a kxk matrix linking pairs of groups to edge bundles
 %       theta_w   - rxd mat of parameters for each weight distr
 %       theta_e   - rxd mat of parameters for each edge distr
 %       group_sizes - kx1 vec of group/block sizes (sum is n)
-%       degree_para - nx2 vec or mean in- and out- degrees (DC models only)
+%       degree_para - nx2 vec of mean in- and out- degrees (DC models only)
 %
 %   Outputs:
 %       edge_list - mx3 mat of Raw_Data values 
