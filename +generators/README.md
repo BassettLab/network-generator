@@ -106,7 +106,7 @@ Full list of model types (each model type realizes a different generative rule):
 in development
 
 
-<a name="autoregressive"/>**Weighted Stochastic Block Model** `wsbm_gen` [WSBM](http://tuvalu.santafe.edu/~aaronc/wsbm/), [Aicher et al. 2014](https://arxiv.org/abs/1404.0431) <br>
+<a name="wsbm_gen"/>**Weighted Stochastic Block Model** `wsbm_gen` [WSBM](http://tuvalu.santafe.edu/~aaronc/wsbm/), [Aicher et al. 2014](https://arxiv.org/abs/1404.0431) <br>
 **w_truth** string for probability distribution for edge weights, available distributions include: Bernoulli, Binomial, Poisson, Geometric, NegBinomial, Normal, LogNormal, Exponential, Pareto, None <br>
 **e_truth** string for probability distribution for edge presence, available distributions include: Bernoulli, Binomial, Poisson, Geometric, NegBinomial, None, DC (Degree Corrected) <br>
 **r** k-by-k matrix linking pairs of groups to edge-bundles <br>
