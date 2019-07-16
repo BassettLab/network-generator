@@ -104,3 +104,35 @@ Full list of model types (each model type realizes a different generative rule):
 
 <a name="graphicallasso"/>**Graphical lasso** `graphicallasso` [Friedman et al. 2007](http://statweb.stanford.edu/~tibs/glasso/)<br>
 in development
+
+
+<a name="wsbm_gen"/>**Weighted Stochastic Block Model** `wsbm_gen` [WSBM](http://tuvalu.santafe.edu/~aaronc/wsbm/), [Aicher et al. 2014](https://arxiv.org/abs/1404.0431) <br>
+**w_truth** string for probability distribution for edge weights, available distributions include: Bernoulli, Binomial, Poisson, Geometric, NegBinomial, Normal, LogNormal, Exponential, Pareto, None <br>
+**e_truth** string for probability distribution for edge presence, available distributions include: Bernoulli, Binomial, Poisson, Geometric, NegBinomial, None, DC (Degree Corrected) <br>
+**r** k-by-k matrix linking pairs of groups to edge-bundles <br>
+**theta_w** r-by-d matrix of parameters for weight distributions <br>
+**theta_e** r-by-d matrix of parameters for edge distributions <br>
+**group_sizes** k-by-1 matrix of block sizes <br>
+**degree_para** n-by-2 vector of mean in- and out-degrees (for degree-corrected models only)
+
+Example:
+```
+w_truth = 'Normal';
+e_truth = 'Bernoulli';
+r = [1,2,2,2; 
+     2,1,2,2; 
+     2,2,1,2;
+     2,2,2,1];
+theta_w = [10,2; 10,2];
+theta_e = [0.9; 0.1];
+group_sizes = [50;50;50;50];
+
+n = net.generate('wsbm_gen',...
+    'W_truth', w_truth,...
+    'E_truth', e_truth,...
+    'R', r,...
+    'theta_w', theta_w,...
+    'theta_e', theta_e,...
+    'group_sizes', group_sizes);
+```
+Above example creates a network with 4 modules that interact based on 2 edge-weight and 2 edge-presence probability distributions. Edges are drawn from a normal distribution with mean 10 and standard deviation 2. Edge presence is characterized by two Bernoulli distributions, one with edge likelihood 0.9 and the other with likelihood 0.1.
